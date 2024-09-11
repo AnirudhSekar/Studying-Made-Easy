@@ -1,0 +1,23 @@
+
+User: Hey
+Bot: Hi! How can I help you?
+User: Hey
+Bot: Hi there! How's it going?
+User: Hey
+Bot: Hi! How can I help you?
+User: Hey
+Bot: Hi! How can I help you today?
+User: Hey
+Bot: Hi! How can I help you?
+User: Hey
+Bot: Hi! How can I help you?
+User: Hey
+Bot: Hello! How can I help you today?
+User: Hey
+Bot: Hi! How can I help you today?
+User: Hey
+Bot: Hello! How can I help you today?
+User: Hey
+Bot: Hi! How can I help you today?
+User: Hey
+Bot: Hi there! How can I help you?
