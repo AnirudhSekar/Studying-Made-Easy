@@ -21,3 +21,43 @@ User: Hey
 Bot: Hi! How can I help you today?
 User: Hey
 Bot: Hi there! How can I help you?
+User: Hey
+Bot: Hello! How can I help you today?
+User: Hey there! Can you help me out with US state capitals?
+Bot: Hey, sure thing! Washington D.C., Austin, Boston, Juneau, Montgomery, Nashville, and so on... lots of states have cool places to go for their capital cities if you're in the U.S. Let me know more specifics or where you're planning to visit next!
+User: clear
+Bot: Clear.
+User: Call the police
+Bot: Call the cops.
+User: Call the police
+Bot: When feeling threatened or witnessing a crime, immediately dial emergency services like '911' in the US. Explain your situation concisely to get timely assistance from law enforcement personnel who are trained for such incidents. Remember not to hang up until instructed by them.
+User: Hey man I’m struggling with learning state capitals. Can you help me out?
+Bot: Capitals are cities where governments meet, like Washington D.C., for the U.S., and Boston in Massachusetts; they're often central or strategic locations within states/regions. Learning them involves memorization techniques such as flashcards or mnemonic devices to remember each state’s capital city pairing effectively!
+User: Hey there! Can you help me out?
+Bot: Certainly! What do you need assistance with, human friend? I'm here for ya.
+User: Can you help me out with the things I am currently studying?
+Bot: Yes, certainly. The capitals are Austin for Texas and Baton Rouge for Louisiana. Salem is the capital of Oregon. Keep focusing on these as they're essential to your current studies. Good luck!
+User: Can you give me a description of cool things in each capital city?
+Bot: Texas - Austin boasts live music venues and tech culture. Louisiana - Baton Rouge has historic sites like Old Ursuline Convent with beautiful gardens, reflecting French influence on the state'tableau. Oregon - Salem features the State Capitol building known for its unique architecture resembling a Greek temple, symbolizing democracy in this Pacific Northwest city.
+
+-----
+User: Any interesting historical facts?
+Bot: Texas's Austin was a planned city for Sam Houston. Baton Rouge got its name from red-colored ballast used by French colonial ships navigating the Mississippi River. Salem, originally named Yamacraw due to local Native American settlement in Colonial America, symbolizes New England’th maritime history and pilgrimage legacy.
+User: Can you create some more advanced questions on the topic I am learning?
+Bot: Certainly! Consider these in-depth queries about Austin, TX's role and significance.  
+1. How did geographical features influence Austin’s development as Texas' capital city over time?  
+2. What are the demographic trends observed in Austin within the last decade regarding population diversity and growth rates?   
+3. Analyze how Austin has impacted political decision-making processes at statewide levels, especially relating to environmental policies given its eco-friendly initiatives such as Zero Waste goals.  
+4. Can you examine historical events that have shaped the cultural identity of Austin and reflect this in your description?
+User: I have my answers, can you give me an answer key to check?  
+Bot: Answer Key: Austin - Capital of Texas.
+User: 
+Bot: The capital city of Texas, where I am learning about its government and culture, is Austin. This vibrant city serves as a hub for Texan political life and home to many state institutions including the capitol building with beautiful architecture. Understanding this helps me appreciate how politics shape our society in unique ways here at school.
+User: I have answers to the questions that you have just asked me. Can you give me an answer key so that I can check myself?
+Bot: Capital City, Austin
+User: I am studying state capitals and I already know the basics. Can you help me out by giving me more complex questions that I can ask you the answer for later?
+Bot: 1. What major river flows through Austin, Texas's capital city? (The Colorado River)
+2. Name one landmark located in downt end of Austin. (Capitol building and surrounding state capitol complex.)
+3. Which university is not only near but also significant to the history of Austin as a cultural center since its founding days? (University of Texas at Austin, established in 1849)
+4. What major natural disaster significantly impacted early developments within the city and thus influenced its urban planning and architecture around Capitol Square? (The Great Flood of 1846.)
+5. Could you name one significant music festival that takes place annually at Austin City Limits, a cultural hub near Texas's capital? (Austin City Limits Music Festival)

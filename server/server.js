@@ -32,7 +32,7 @@ const executePython = async (script, args)=> {
 app.post("/llm", async (req,res) => {
   try {
     console.log(req.body)
-    const result = await executePython("python/llm.py", ["Hey", "Nothing"])
+    const result = await executePython("python/llm.py", [req.body.question, req.body.studying, req.body.convhist])
     res.json({"result":result})
   } catch (error) {
     res.status(500).json(error)

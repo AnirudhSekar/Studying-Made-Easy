@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react'
 import {SafeAreaView, Text, Dimensions, View, TextInput, StyleSheet, ScrollView, TouchableOpacity, Platform} from 'react-native'
 import axios from 'axios'
 import { CardContext } from './Context'
-import { FlatList } from 'react-native'
 
 
 const AI_ASSISTANT = () => {
@@ -11,10 +10,17 @@ const AI_ASSISTANT = () => {
     const [responses, setResponses] = useState([])
     const {cards, questions, answers} = useContext(CardContext)
     const sendPostData = function () {
+            if (question.toLowerCase() === "clear") {
+                setAllQuestions([])
+                setResponses([])
+                setQuestion("")
+                return
+            }
             axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
             axios.post('http://192.168.1.169:4242/llm', {
                 "question" : question,
-                "context": [questions,answers]
+                "studying": [questions,answers], 
+                "convhist" : [allQuestions, responses]
             })
             .then(response => {
                 console.log(response.data.result)
@@ -22,6 +28,7 @@ const AI_ASSISTANT = () => {
                 console.log(allQuestions)
                 setResponses([...responses, response.data.result])
                 console.log(responses)
+                setQuestion("")
           })
             .catch(error => console.error(error))
     }
@@ -48,16 +55,18 @@ const AI_ASSISTANT = () => {
                      Add Question</Text>
             </TouchableOpacity>
             </View>
-            <View style={{margin:"20px"}}>
+            <ScrollView style={{height: Platform.OS === 'android' ? Dimensions.get('window').height / 2: Dimensions.get('window').height-350}}>
+                <View style={{padding:20}}>
                 {
                     responses.map(response => (
-                        <View style={{margin:"20"}}>
-                        <Text style={{fontWeight:'bold'}}>Question:</Text><Text>{allQuestions[responses.indexOf(response)]}</Text>
+                        <View key={responses.indexOf(response)} style={{margin:"50px"}}>
+                        <Text style={{paddingBottom:10}}><Text style={{fontWeight:'bold'}}>Question:</Text> {allQuestions[responses.indexOf(response)]}</Text>
                         <Text style={{marginTop:"20",fontWeight:'bold'}}>Response: </Text><Text>{response}</Text>
                         </View>
                     ))
                 }
-            </View>
+                </View>
+            </ScrollView>
         </SafeAreaView>
         </View>
     );

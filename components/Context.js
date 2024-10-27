@@ -16,6 +16,7 @@ export const CardContextProvider = ({children}) => {
         editIndex, setEditIndex,
         questions,setQuestions,
         answers, setAnswers
+        
     }
     return (
         <CardContext.Provider value={values}>

@@ -4,7 +4,7 @@ import Create from "../components/Create";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import AI_ASSISTANT from "../components/AI_Assistant";
 import { Platform } from "react-native";
-
+import Schedule from '../components/Schedule'
 const Tab = createBottomTabNavigator()
 const Tabs = () => {
     return (
@@ -27,6 +27,9 @@ const Tabs = () => {
                         : 'add-circle-outline';
                 
                     }
+                    else if (route.name === "Schedule") {
+                      iconName = focused ? 'book' : 'book-outline'
+                    }
                     else if (route.name === 'Test') {
                         iconName = focused ?'clipboard' : 'clipboard-outline'
                     }
@@ -42,6 +45,7 @@ const Tabs = () => {
                 })}>
             <Tab.Screen name="Create" component={Create}></Tab.Screen>
             <Tab.Screen name="Test" component={Test}></Tab.Screen>
+            <Tab.Screen name="Schedule" component={Schedule}></Tab.Screen>
             <Tab.Screen name="AI Assistant" component={AI_ASSISTANT}></Tab.Screen>
 
         </Tab.Navigator>

@@ -3,6 +3,7 @@ import {SafeAreaView, Text, Dimensions, View, TextInput, StyleSheet, ScrollView,
 import { CardContext } from './Context'
 const Test = () => {
     const {cards, questions, answers} = useContext(CardContext)
+
     const height = (Dimensions.get("screen").height)
     var empty = false
     
@@ -10,6 +11,8 @@ const Test = () => {
     const [item, setItem] = useState([])
     const [submitted, setSubmit] = useState(false)
     const [tryAgain, setTryAgain] = useState(false)
+    const [correct, setCorrect] = useState([])
+    const [incorrect, setIncorrect] = useState([])
     const changeItem = (text, id) => {
         oldItem = [...item]
         oldItem[id] = text
@@ -18,17 +21,27 @@ const Test = () => {
 
     const gradeAnswers = () => {
         var newcount = 0
+        correctList = [...correct]
+        incorrectList = [...incorrect]
         for (let i = 0; i < item.length; i++) {
-            console.log(item[i].toLowerCase());
-            console.log(answers[i].toLowerCase());
             if (item[i].toLowerCase() === answers[i].toLowerCase()) {
+                setCorrect([...correctList, i+1])
+                correctList = [...correctList, i+1]
                 newcount++
             }
+            else {
+                setIncorrect([...incorrectList, i+1])
+                incorrectList = [...incorrectList, i+1]
+
+            }
         }
-        console.log(newcount);
+
         setCount(newcount)
         setSubmit(true)
+
         newcount=0
+        correctList = []
+        incorrectList = []
     }
     const resetPage = () => {
         empty = true
@@ -36,13 +49,17 @@ const Test = () => {
         setItem([])
         setSubmit(false)
         setTryAgain(true)
+        setCorrect([])
+        setIncorrect([])
     }
     const returnforsubmit = () => {
-
+        console.log(correct)
+        console.log(incorrect)
         return (
             <View>
                     <View>
                         <Text style={{color: submitted && !empty ? 'black' : 'white', textAlign:'center', fontSize:18, paddingTop:15, fontWeight:'600'}}>You got {count}/{cards.length} correct! That is a {((count/cards.length)*100).toFixed(0)}%</Text>
+                        <Text style={{color: submitted && !empty ? 'black' : 'white', textAlign:'center', fontSize:14, paddingTop:15, fontWeight:'600'}}>The questions you got correct were {correct.toString() == "" ?  "None" : correct.toString()} and the questions you got incorrect were {incorrect.toString() == "" ?  "None" : incorrect.toString()}</Text>
                     </View>
             </View>
         )
@@ -75,9 +92,8 @@ const Test = () => {
             <Text style = {styles.heading}>Test</Text>
             
             <ScrollView style={{height: Platform.OS === 'android' ? Dimensions.get('window').height / 2:Dimensions.get('window').height-200}}>
-            
             {
-                checkForEmptyValue()
+                checkForEmptyValue() 
             }
             
             <TouchableOpacity style={[styles.submitButton, {backgroundColor: empty ? 'white' : 'green'}, {borderColor: empty ? "white" : 'lightgray'}, {color: submitted ? 'white' : 'black'}]} 

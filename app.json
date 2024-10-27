@@ -1,5 +1,6 @@
 {
   "expo": {
+    
     "name": "CongressionalAppChallenge",
     "slug": "CongressionalAppChallenge",
     "version": "1.0.0",
@@ -15,6 +16,10 @@
       "**/*"
     ],
     "ios": {
+      
+    "infoPlist": {
+      "UIBackgroundModes": ["fetch", "remote-notification"]
+    },
       "supportsTablet": true
     },
     "android": {
@@ -25,6 +30,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8a1d9c71-02b7-4991-8075-e478cf70bcc8"
+      }
+    },
+    "owner": "anirudh_sekar"
   }
 }
